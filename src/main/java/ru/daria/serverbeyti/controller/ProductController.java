@@ -1,6 +1,7 @@
 package ru.daria.serverbeyti.controller;
 
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("product")
+@Tag(name = "main_methods")
 public class ProductController {
 
 

@@ -3,6 +3,7 @@ package ru.daria.serverbeyti.service;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import ru.daria.serverbeyti.dao.ProductRepository;
 import ru.daria.serverbeyti.dto.ProductDTO;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+
 public abstract class ProductService {
   @Autowired
     private  ProductRepository productRepository;
