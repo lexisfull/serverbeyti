@@ -1,6 +1,7 @@
 package ru.daria.serverbeyti.service;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Component;
@@ -12,11 +13,10 @@ import ru.daria.serverbeyti.model.Product;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor(onConstructor_ = {@Autowired})
+public class ProductService {
 
-public abstract class ProductService {
-  @Autowired
-    private  ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
 
     public void saveProduct(){
